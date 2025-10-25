@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovejeet Singh - Application for The Céilie</title>
+    <!-- 1. Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Google Fonts from The Céilie's Website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Special+Elite&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- 3. Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // Replicating the website's color palette
+                    colors: {
+                        'ceilie-bg': '#BDC583', // Light olive background
+                        'ceilie-dark': '#263B24', // Dark green text/accents
+                        'ceilie-mid': '#4D6438',  // Mid green
+                        'ceilie-nav': '#9CA777',  // Nav background color
+                        'ceilie-card': '#DCE1C1', // A lighter card background
+                    },
+                    // Replicating the website's fonts
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'], // Body text
+                        'serif': ['MedievalSharp', 'serif'], // Logo font
+                        'mono': ['Special Elite', 'monospace'] // Header font
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Simple fade-in animation for cards */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        /* Staggering animation delays */
+        .fade-in-1 { animation-delay: 0.1s; opacity: 0; }
+        .fade-in-2 { animation-delay: 0.2s; opacity: 0; }
+        .fade-in-3 { animation-delay: 0.3s; opacity: 0; }
+        .fade-in-4 { animation-delay: 0.4s; opacity: 0; }
+    </style>
+</head>
+<body class="bg-ceilie-bg text-ceilie-dark font-sans antialiased min-h-screen p-6 md:p-12">
+
+    <div class="max-w-4xl mx-auto">
+        
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h2 class="font-mono text-3xl md:text-5xl mb-4">Hey <span class="font-serif text-4xl md:text-6xl text-ceilie-mid">Céilie</span>,</h2>
+            <h1 class="font-mono text-4xl md:text-6xl font-bold">Here's Why You Should Hire Me!</h1>
+            <p class="text-2xl md:text-3xl font-serif text-ceilie-dark mt-6">- Lovejeet Singh -</p>
+        </header>
+
+        <!-- Intro Summary -->
+        <div class="bg-ceilie-card/80 p-6 md:p-8 rounded-lg shadow-lg text-center mb-12 fade-in fade-in-1">
+            <p class="text-xl md:text-2xl text-ceilie-dark font-medium leading-relaxed">
+                I'm a reliable and enthusiastic <strong class="text-ceilie-mid">Trent University student</strong> with valid <strong class="text-ceilie-mid">Smart Serve</strong> and <strong class="text-ceilie-mid">Food Safety</strong> certifications. I'm eager to support your team as a Bartender, Cashier, or Floor Staff and am committed to upholding your high standards of service and safety.
+            </p>
+        </div>
+
+        <!-- Key Reasons Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+            <!-- Card 1: Certifications -->
+            <div class="bg-ceilie-card p-6 rounded-lg shadow-lg fade-in fade-in-2">
+                <h3 class="font-mono text-3xl text-ceilie-dark mb-4 border-b-2 border-ceilie-mid pb-2">Certified & Ready</h3>
+                <ul class="space-y-3 text-lg text-ceilie-dark">
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-ceilie-mid mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <strong>Smart Serve Certificate</strong>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-6 h-6 text-ceilie-mid mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <strong>Food Safety Certification</strong>
+                    </li>
+                </ul>
+                <p class="text-ceilie-dark/80 mt-2 text-sm">(Valid: 2025-2030)</p>
+            </div>
+
+            <!-- Card 2: Availability -->
+            <div class="bg-ceilie-card p-6 rounded-lg shadow-lg fade-in fade-in-3">
+                <h3 class="font-mono text-3xl text-ceilie-dark mb-4 border-b-2 border-ceilie-mid pb-2">My Availability</h3>
+                <ul class="space-y-2 text-lg text-ceilie-dark">
+                    <li><strong>Monday:</strong> <span class="text-ceilie-mid font-semibold">Full Day</span></li>
+                    <li><strong>Tuesday:</strong> <span class="text-ceilie-mid font-semibold">Full Day</span></li>
+                    <li><strong>Wednesday:</strong> <span class="text-ceilie-mid font-semibold">Until 5 PM</span></li>
+                    <li><strong>Thursday:</strong> <span class="text-ceilie-mid font-semibold">3 PM – 9 PM</span></li>
+                    <li><strong>Friday:</strong> <span class="text-ceilie-mid font-semibold">3 PM – 9 PM</span></li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Experience -->
+            <div class="bg-ceilie-card p-6 rounded-lg shadow-lg md:col-span-2 fade-in fade-in-4">
+                <h3 class="font-mono text-3xl text-ceilie-dark mb-4 border-b-2 border-ceilie-mid pb-2">Relevant Experience</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xl font-bold text-ceilie-dark">Cashier</h4>
+                        <p class="text-lg text-ceilie-mid font-semibold mb-2">Singh Sons (2023–2024)</p>
+                        <ul class="list-disc list-inside text-ceilie-dark space-y-1">
+                            <li>Operated POS system to process orders.</li>
+                            <li>Handled all cash, credit, and debit transactions.</li>
+                            <li>Maintained a clean and organized counter area.</li>
+                            <li>Addressed customer inquiries and resolved issues.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-ceilie-dark">Janitor</h4>
+                        <p class="text-lg text-ceilie-mid font-semibold mb-2">LIC Agent Office (2022–2023)</p>
+                        <ul class="list-disc list-inside text-ceilie-dark space-y-1">
+                            <li>Maintained high standards of cleanliness.</li>
+                            <li>Sanitized kitchen and breakroom areas.</li>
+                            <li>Cleaned food prep surfaces and appliances.</li>
+                            <li>Managed trash and recycling removal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer CTA -->
+        <footer class="text-center mt-12 fade-in fade-in-4">
+            <h3 class="font-mono text-3xl md:text-4xl text-ceilie-dark mb-6">I am ready to be interviewed!</h3>
+            <a href="mailto:ceilie@trentu.ca?subject=Application%20from%20Lovejeet%20Singh" 
+               class="inline-block bg-ceilie-dark text-ceilie-bg font-mono text-2xl py-4 px-10 rounded-lg shadow-lg transition-transform duration-300 hover:bg-ceilie-mid hover:scale-105">
+                Contact Me
+            </a>
+            <p class="text-ceilie-mid font-semibold mt-6 text-lg">
+                <a href="mailto:lovejeetwraichh@gmail.com" class="hover:underline">lovejeetwraichh@gmail.com</a> | +1 (742) 247-0123
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
+
+
+
